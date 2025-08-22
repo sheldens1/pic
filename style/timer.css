@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(61, 61, 61);
+    font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+}
+ /* ============= */
+ /* NAVBAR */
+ /* ============ */
+.navbar {
+    position: fixed;       /* Biar selalu nempel di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;          /* sesuai format */
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* biar tombolnya rata tengah */
+    gap: 90px;
+    background-color: #333; /* kasih background biar jelas */
+    z-index: 1000;         /* biar nggak ketutupan konten */
+}
+
+    /* LINK */
+    .navbar a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 17px;
+      border: 1px solid white;
+      border-radius: 6px;
+      padding: 14px 16px;
+      transform: scale(1);
+      transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 0.6s forwards;
+      margin-left: 60px;
+    }
+
+    /* Delay biar animasi muncul satu-satu */
+    .navbar a:nth-child(1) { animation-delay: 0.2s; }
+    .navbar a:nth-child(2) { animation-delay: 0.4s; }
+    .navbar a:nth-child(3) { animation-delay: 0.6s; }
+    .navbar a:nth-child(4) { animation-delay: 0.8s; }
+
+    /* Hover effect */
+    .navbar a:hover {
+      transform: scale(1.2);
+      color: #ff9800;
+      box-shadow: 0 0 15px #ff9800;
+    }
+
+        @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
