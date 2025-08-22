@@ -11,19 +11,39 @@
         <ul>
             <a class="active" href="index.html">Menu</a>
             <a href="skills.html">Skills</a>
-            <a href="timer.html">Timer podo</a>
+            <a href="timer.html">Timer pomodoro</a>
         </ul>
         </div>
-
-<br>
-<br>
-<br>
-
 
            <div class="header">
         <h1>Keterampilan Saya</h1>
         <p>Berikut adalah berbagai kemampuan dan keahlian yang telah saya kembangkan melalui pendidikan, pelatihan, dan pengalaman profesional.</p>
     </div>
     
+    <div class="timer-container">
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="timer-label" id="timerLabel">text</div>
+        
+        <div class="control-buttons">
+            <button class="btn" id="startBtn" onclick="startTimer()">Start</button>
+            <button class="btn" id="stopBtn" onclick="stopTimer()">Stop</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="mode-label">Mode:</div>
+        <div class="mode-buttons">
+            <button class="mode-btn active" id="kerjaBtn" onclick="setMode('kerja')">kerja</button>
+            <button class="mode-btn" id="istirahatBtn" onclick="setMode('istirahat')">istirahat</button>
+            <button class="mode-btn" id="istirahatLamaBtn" onclick="setMode('istirahat_lama')">istirahat lama</button>
+        </div>
+
+        <div class="status-text" id="statusText">text</div>
+    </div>
+
+
 </body>
+<script src="script/script.js"></script>
 </html>
